@@ -9,7 +9,7 @@ MySql Database setup
   Create a database: tutorialdb
 
 Server setup
-  cd server 
+  $ cd server 
   $ npm install express cors mysql2 nodemon sequelize sequelize-cli
   $ npx sequelize init
 
@@ -25,4 +25,11 @@ install Insomnia: https://insomnia.rest/download
   set up GetAllPosts: GET http://localhost:3001/posts 
 
 Set up debugger: launch.json
+
+****************************** LESSON 3 ******************************
+https://www.youtube.com/watch?v=DO_wR1tx-O0&list=PLpPqplz6dKxUaZ630TY1BFIo5nP-_x-nL&index=3
+
+$ cd client
+$ npx create-react-app .
+$ npm install axios
 

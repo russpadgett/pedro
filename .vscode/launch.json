@@ -1,7 +1,14 @@
 {
     "version": "0.2.0",
     "configurations": [
+
         {
+            "type": "chrome",
+            "request": "launch",
+            "name": "WEB",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}"
+        },{
             "type": "chrome",
             "request": "launch",
             "name": "API",
