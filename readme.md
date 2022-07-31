@@ -33,3 +33,17 @@ $ cd client
 $ npx create-react-app .
 $ npm install axios
 
+****************************** LESSON 4 ******************************
+https://www.youtube.com/watch?v=lxroBmTiOhI&list=PLpPqplz6dKxUaZ630TY1BFIo5nP-_x-nL&index=4
+
+$ cd client
+$ npm install formik react-query react-router-dom yup
+
+install extension: VS Code ES7+ React/Redux/React-Native/JS snippets
+  rfce
+
+Break out App page into functional pages and implement routing
+  Add Home page
+  Add CreatePost page
+  Update App page with page Routing
+  
