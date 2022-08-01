@@ -51,3 +51,8 @@ Break out App page into functional pages and implement routing
 https://www.youtube.com/watch?v=7dfd92NS7uc&list=PLpPqplz6dKxUaZ630TY1BFIo5nP-_x-nL&index=5
 
 Add edit link
+
+****************************** LESSON 6 ******************************
+https://www.youtube.com/watch?v=pXGIdl2aR4g&list=PLpPqplz6dKxUaZ630TY1BFIo5nP-_x-nL&index=6
+
+Add comments feature
