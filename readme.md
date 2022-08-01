@@ -78,3 +78,9 @@ Enhancing Login features with JWT Authentication
 $ cd server
 $ npm install cookie-parser jsonwebtoken
 
+****************************** LESSON 10 ******************************
+
+https://www.youtube.com/watch?v=RnALCXo6U-k&list=PLpPqplz6dKxUaZ630TY1BFIo5nP-_x-nL&index=10
+
+Enhancing Login features with Authentication check and better Cookie management
+
