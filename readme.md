@@ -56,3 +56,8 @@ Add edit link
 https://www.youtube.com/watch?v=pXGIdl2aR4g&list=PLpPqplz6dKxUaZ630TY1BFIo5nP-_x-nL&index=6
 
 Add comments feature
+
+****************************** LESSON 7 ******************************
+https://www.youtube.com/watch?v=2Xr-WddT3Lo&list=PLpPqplz6dKxUaZ630TY1BFIo5nP-_x-nL&index=7
+
+Adding Comments feature UI
