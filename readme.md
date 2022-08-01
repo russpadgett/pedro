@@ -61,3 +61,12 @@ Add comments feature
 https://www.youtube.com/watch?v=2Xr-WddT3Lo&list=PLpPqplz6dKxUaZ630TY1BFIo5nP-_x-nL&index=7
 
 Adding Comments feature UI
+
+****************************** LESSON 8 ******************************
+https://www.youtube.com/watch?v=OGGnjBE5qr0&list=PLpPqplz6dKxUaZ630TY1BFIo5nP-_x-nL&index=8
+
+Adding User Registration and Login features
+
+$ cd server
+$ npm install bcrypt
+
