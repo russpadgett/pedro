@@ -1,7 +1,7 @@
 ****************************** LESSON 1 ******************************
 https://www.youtube.com/watch?v=Hl7diL7SFw8&list=PLpPqplz6dKxUaZ630TY1BFIo5nP-_x-nL
 
-React, NodeJs, Express, MySql
+ReactJS, NodeJS, ExpressJS, MySql, Sequelize
 
 MySql Database setup
   Install MySql: https://www.mysql.com/downloads/ 
@@ -69,4 +69,12 @@ Adding User Registration and Login features
 
 $ cd server
 $ npm install bcrypt
+
+****************************** LESSON 9 ******************************
+https://www.youtube.com/watch?v=-UKPph5XU_c&list=PLpPqplz6dKxUaZ630TY1BFIo5nP-_x-nL&index=9
+
+Enhancing Login features with JWT Authentication
+
+$ cd server
+$ npm install cookie-parser jsonwebtoken
 
