@@ -12,34 +12,38 @@ function Post() {
     axios.get(`http://localhost:3001/posts/byId/${id}`).then((response) => {
       setPostObject(response.data);
     });
+
     axios.get(`http://localhost:3001/comments/${id}`).then((response) => {
       setComments(response.data);
     });
-  },[id]);
+  }, [id]);
 
   const addComment = () => {
     axios
-    .post(
-      "http://localhost:3001/comments",
-      {
-        commentBody: newComment,
-        PostId: id,
-      },
-      {
-        headers: {
-          accessToken: sessionStorage.getItem("accessToken"),
+      .post(
+        "http://localhost:3001/comments",
+        {
+          commentBody: newComment,
+          PostId: id,
         },
-      }
-    )
-    .then((response) => {
-      if (response.data.error) {
-        console.log(response.data.error);
-      } else {
-        const commentToAdd = { commentBody: newComment };
-        setComments([...comments, commentToAdd]);
-        setNewComment("");
-      }
-    });
+        {
+          headers: {
+            accessToken: localStorage.getItem("accessToken"),
+          },
+        }
+      )
+      .then((response) => {
+        if (response.data.error) {
+          console.log(response.data.error);
+        } else {
+          const commentToAdd = {
+            commentBody: newComment,
+            username: response.data.username,
+          };
+          setComments([...comments, commentToAdd]);
+          setNewComment("");
+        }
+      });
   };
 
   return (
@@ -69,6 +73,7 @@ function Post() {
             return (
               <div key={key} className="comment">
                 {comment.commentBody}
+                <label> Username: {comment.username}</label>
               </div>
             );
           })}
