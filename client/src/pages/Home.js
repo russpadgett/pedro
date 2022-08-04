@@ -8,21 +8,26 @@ import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 function Home() {
   const [listOfPosts, setListOfPosts] = useState([]);
   const [likedPosts, setLikedPosts] = useState([]);
-  let navigation = useNavigate();
+  
+  let navigate = useNavigate();
 
   useEffect(() => {
-    axios
-      .get("http://localhost:3001/posts", {
-        headers: { accessToken: localStorage.getItem("accessToken") },
-      })
-      .then((response) => {
-        setListOfPosts(response.data.listOfPosts);
-        setLikedPosts(
-          response.data.likedPosts.map((like) => {
-            return like.PostId;
-          })
-        );
-      });
+    if (!localStorage.getItem("accessToken")) {
+      navigate("/login");
+    } else {
+      axios
+        .get("http://localhost:3001/posts", {
+          headers: { accessToken: localStorage.getItem("accessToken") },
+        })
+        .then((response) => {
+          setListOfPosts(response.data.listOfPosts);
+          setLikedPosts(
+            response.data.likedPosts.map((like) => {
+              return like.PostId;
+            })
+          );
+        });
+    }
   }, []);
 
   const likeAPost = (postId) => {
@@ -70,7 +75,7 @@ function Home() {
             <div
               className="body"
               onClick={() => {
-                navigation(`/post/${value.id}`);
+                navigate(`/post/${value.id}`);
               }}
             >
               {value.postText}
@@ -80,7 +85,7 @@ function Home() {
               <div className="buttons">
               {
                 likedPosts.includes(value.id) ?   
-              <ThumbUpAltIcon
+                <ThumbUpAltIcon
                   onClick={() => {
                     likeAPost(value.id);
                   }}
@@ -92,7 +97,7 @@ function Home() {
                   }}
                 />
               }
-              <label> {value.Likes.length}</label>
+                <label> {value.Likes.length}</label>
               </div>
             </div>
           </div>
