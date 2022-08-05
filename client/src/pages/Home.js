@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 
@@ -28,7 +28,7 @@ function Home() {
           );
         });
     }
-  }, []);
+  }, [navigate]);
 
   const likeAPost = (postId) => {
     axios
@@ -81,7 +81,9 @@ function Home() {
               {value.postText}
             </div>
             <div className="footer">
-              <div className="username">{value.username}</div>
+              <div className="username">
+                <Link to={`/profile/${value.UserId}`}> {value.username} </Link>
+              </div>
               <div className="buttons">
               {
                 likedPosts.includes(value.id) ?   

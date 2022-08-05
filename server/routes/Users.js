@@ -23,8 +23,6 @@ router.post("/login", async (req, res) => {
 
   if (!user) res.json({ error: "User Doesn't Exist" });
 
-  debugger;
-  
   bcrypt.compare(password, user.password).then(async (match) => {
     if (!match) res.json({ error: "Wrong Username And Password Combination" });
 
@@ -38,6 +36,16 @@ router.post("/login", async (req, res) => {
 
 router.get("/auth", validateToken, (req, res) => {
   res.json(req.user);
+});
+
+router.get("/basicinfo/:id", async (req, res) => {
+  const id = req.params.id;
+
+  const basicInfo = await Users.findByPk(id, {
+    attributes: { exclude: ["password"] },
+  });
+
+  res.json(basicInfo);
 });
 
 module.exports = router;
